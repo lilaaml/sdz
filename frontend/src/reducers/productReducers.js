@@ -16,6 +16,12 @@ import {
     PRODUCT_CREATE_FAIL,
     PRODUCT_CREATE_RESET,
 
+    
+    PRODUCT_CREATE_V2_REQUEST,
+    PRODUCT_CREATE_V2_SUCCESS,
+    PRODUCT_CREATE_V2_FAIL,
+    PRODUCT_CREATE_V2_RESET,
+
     PRODUCT_UPDATE_REQUEST,
     PRODUCT_UPDATE_SUCCESS,
     PRODUCT_UPDATE_FAIL,
@@ -102,6 +108,26 @@ export const productCreateReducer = (state = {}, action) => {
             return { loading: false, error: action.payload }
 
         case PRODUCT_CREATE_RESET:
+            return {}
+
+        default:
+            return state
+    }
+}
+
+
+export const productCreateV2Reducer = (state = {}, action) => {
+    switch (action.type) {
+        case PRODUCT_CREATE_V2_REQUEST:
+            return { loading: true }
+
+        case PRODUCT_CREATE_V2_SUCCESS:
+            return { loading: false, success: true, product: action.payload }
+
+        case PRODUCT_CREATE_V2_FAIL:
+            return { loading: false, error: action.payload }
+
+        case PRODUCT_CREATE_V2_RESET:
             return {}
 
         default:
