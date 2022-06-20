@@ -73,15 +73,16 @@ def createProduct(request):
 
 @api_view(['POST'])
 def createProductV2(request):
-    data = request.data
+    user = request.user
 
     product = Product.objects.create(
-        name = data['name'],
-        price = data['price'],
-        brand = data['brand'],
-        countInStock = data['countInStock'],
-        category = data['category'],
-        description = data['description']
+        user=user,
+        name='Sample Name',
+        price=0,
+        brand='Sample Brand',
+        countInStock=0,
+        category='Sample Category',
+        description=''
     )
 
     serializer = ProductSerializer(product, many=False)

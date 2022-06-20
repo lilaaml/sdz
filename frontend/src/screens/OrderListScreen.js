@@ -55,7 +55,7 @@ function OrderListScreen({ history }) {
                                         <td>{order._id}</td>
                                         <td>{order.user && order.user.name}</td>
                                         <td>{order.createdAt.substring(0, 10)}</td>
-                                        <td>Rp.{order.totalPrice}</td>
+                                        <td>${order.totalPrice}</td>
 
                                         <td>{order.isPaid ? (
                                             order.paidAt.substring(0, 10)
