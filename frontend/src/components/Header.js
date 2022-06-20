@@ -21,13 +21,17 @@ function Header() {
             <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand>ProShop</Navbar.Brand>
+                        <Navbar.Brand>SaranaPintu</Navbar.Brand>
                     </LinkContainer>
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <SearchBox />
                         <Nav className="ml-auto">
+                            <LinkContainer to='/customdoor'>
+                                <Nav.Link ><i className="fas fa-shopping-cart"></i>Custom</Nav.Link>
+                            </LinkContainer>
+
 
                             <LinkContainer to='/cart'>
                                 <Nav.Link ><i className="fas fa-shopping-cart"></i>Cart</Nav.Link>
