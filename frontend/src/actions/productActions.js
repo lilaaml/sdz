@@ -179,7 +179,7 @@ export const createProduct = () => async (dispatch, getState) => {
     }
 }
 
-export const createProductV2 = () => async (dispatch, getState) => {
+export const createProductV2 = (product) => async (dispatch, getState) => {
     try {
         dispatch({
             type: PRODUCT_CREATE_V2_REQUEST
@@ -197,8 +197,8 @@ export const createProductV2 = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.post(
-            `/api/products/create/`,
-            {},
+            `/api/products/createv2/`,
+            product,
             config
         )
         dispatch({
