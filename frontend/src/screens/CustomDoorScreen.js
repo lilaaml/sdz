@@ -36,10 +36,6 @@ function CustomDoorScreen({ match, location, history }) {
     useEffect(() => {
         dispatch({ type: PRODUCT_CREATE_V2_RESET })
 
-        if (!userInfo.isAdmin) {
-            history.push('/login')
-        }
-
         if (successCreateV2) {
             history.push(`/cart/${createdProductV2._id}?qty=${createdProductV2.countInStock}`)
         } else {
@@ -117,28 +113,14 @@ function CustomDoorScreen({ match, location, history }) {
                 <br></br>
                 <Row>
                     <Col>
-                    <Form.Label as="h4">Harga</Form.Label>
+                        <Form.Label as="h4">Harga</Form.Label>
                     </Col>
 
                     <Col>
-                    <h4>{(parseInt(lebar)+parseInt(tinggi))*parseInt(kuantitas)*2250}</h4>
-                    {/* {hasil ? <span>({hasil})</span> : ''} */}
+                        <Form.Label as="h4">{(parseInt(lebar)+parseInt(tinggi))*parseInt(kuantitas)*2250}</Form.Label>
                     </Col>
 
                 </Row>
-
-
-
-                {/* <Form.Group className="mb-3" controlId="formHarga">
-                    <Form.Label>Harga</Form.Label>
-                    <Form.Control type="text" placeholder="Harga"/>
-                </Form.Group> */}
-
-
-
-                {/* <Button variant="primary" type="submit">
-                    Masukkan Keranjang
-                </Button> */}
                 <br></br>
                 <br></br>
                 <Button type='submit' variant='primary'>

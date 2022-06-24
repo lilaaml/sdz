@@ -67,6 +67,10 @@ function Header() {
                                         <NavDropdown.Item>Orders</NavDropdown.Item>
                                     </LinkContainer>
 
+                                    <LinkContainer to='/admin/notificationcenterlist'>
+                                        <NavDropdown.Item>Notification Center</NavDropdown.Item>
+                                    </LinkContainer>
+
                                 </NavDropdown>
                             )}
 

@@ -18,6 +18,8 @@ import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
 import CustomDoorScreen from './screens/CustomDoorScreen'
+import NotificationCenterScreen from './screens/NotificationCenterScreen'
+import NotificationEditScreen from './screens/NotificationEditScreen'
 
 
 function App() {
@@ -43,6 +45,9 @@ function App() {
 
           <Route path='/admin/productlist' component={ProductListScreen} />
           <Route path='/admin/product/:id/edit' component={ProductEditScreen} />
+
+          <Route path='/admin/notificationcenterlist' component={NotificationCenterScreen} />
+          <Route path='/admin/notificationcenter/:id/edit' component={NotificationEditScreen} />
 
           <Route path='/admin/orderlist' component={OrderListScreen} />
         </Container>

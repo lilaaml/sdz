@@ -80,3 +80,15 @@ class ShippingAddress(models.Model):
 
     def __str__(self):
         return str(self.address)
+
+
+class Notification(models.Model):
+    title = models.CharField(max_length=144, null=True, blank=True)
+    description = models.CharField(max_length=144, null=True, blank=True)
+    link = models.CharField(max_length=400, null=True, blank=True)
+    createdAt = models.DateTimeField(auto_now_add=True)
+    _id = models.AutoField(primary_key=True, editable=False)
+
+    def __str__(self):
+        return str(self.title)
+
