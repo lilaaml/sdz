@@ -12,6 +12,14 @@ import {
     productTopRatedReducer,
 } from './reducers/productReducers'
 
+import {
+    notificationListReducer,
+    notificationDetailsReducer,
+    notificationDeleteReducer,
+    notificationCreateReducer,
+    notificationUpdateReducer,
+} from './reducers/notificationReducers'
+
 import { cartReducer } from './reducers/cartReducers'
 
 import {
@@ -42,6 +50,12 @@ const reducer = combineReducers({
     productUpdate: productUpdateReducer,
     productReviewCreate: productReviewCreateReducer,
     productTopRated: productTopRatedReducer,
+
+    notificationList: notificationListReducer,
+    notificationDetails: notificationDetailsReducer,
+    notificationDelete: notificationDeleteReducer,
+    notificationCreate: notificationCreateReducer,
+    notificationUpdate: notificationUpdateReducer,
 
     cart: cartReducer,
     userLogin: userLoginReducer,
