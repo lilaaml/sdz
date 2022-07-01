@@ -22,30 +22,30 @@ function HomeScreen({ history }) {
     }, [dispatch, keyword])
 
     return (
-        <div>
-            {!keyword && <ProductCarousel />}
+            <div className='m-4'>
+                {!keyword && <ProductCarousel />}
 
-            <h1>Latest Products</h1>
-            {loading ? <Loader />
-                : error ? <Message variant='danger'>{error}</Message>
-                    :
-                    <div>
-                        <Row>
-                            {products.filter(product => {return product.category != 'Custom'})
-                            .map(product => {
-                                return(
-                                    <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-                                        <Product product={product} />  
-                                    </Col>
-                                );
-                            }
+                <h1>Latest Products</h1>
+                {loading ? <Loader />
+                    : error ? <Message variant='danger'>{error}</Message>
+                        :
+                        <div>
+                            <Row className='m-4'>
+                                {products.filter(product => {return product.category != 'Custom'})
+                                .map(product => {
+                                    return(
+                                        <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+                                            <Product product={product} />  
+                                        </Col>
+                                    );
+                                }
 
-                            )}
-                        </Row>
-                        <Paginate page={page} pages={pages} keyword={keyword} />
-                    </div>
-            }
-        </div>
+                                )}
+                            </Row>
+                            <Paginate page={page} pages={pages} keyword={keyword} />
+                        </div>
+                }
+            </div>
     )
 }
 

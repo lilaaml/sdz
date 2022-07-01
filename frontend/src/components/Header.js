@@ -18,10 +18,10 @@ function Header() {
 
     return (
         <header>
-            <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+            <Navbar bg="light" variant="light" expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand>SaranaPintu</Navbar.Brand>
+                        <Navbar.Brand>Sarana Pintu</Navbar.Brand>
                     </LinkContainer>
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -29,12 +29,15 @@ function Header() {
                         <SearchBox />
                         <Nav className="ml-auto">
                             <LinkContainer to='/customdoor'>
-                                <Nav.Link ><i className="fas fa-shopping-cart"></i>Custom</Nav.Link>
+                                <Nav.Link ><i className="fas fa-solid fa-brush"></i> Custom</Nav.Link>
                             </LinkContainer>
 
-
                             <LinkContainer to='/cart'>
-                                <Nav.Link ><i className="fas fa-shopping-cart"></i>Cart</Nav.Link>
+                                <Nav.Link ><i className="fas fa-shopping-cart"></i> Cart</Nav.Link>
+                            </LinkContainer>
+                            
+                            <LinkContainer to='/about'>
+                                <Nav.Link ><i className="fas fa-info"></i> About Us</Nav.Link>
                             </LinkContainer>
 
                             {userInfo ? (

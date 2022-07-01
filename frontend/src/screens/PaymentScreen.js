@@ -34,10 +34,22 @@ function PaymentScreen({ history }) {
                     <Col>
                         <Form.Check
                             type='radio'
-                            label='PayPal or Credit Card'
-                            id='paypal'
+                            label='GoPay'
+                            id='gopay'
                             name='paymentMethod'
                             checked
+                            onChange={(e) => setPaymentMethod(e.target.value)}
+                        >
+
+                        </Form.Check>
+                    </Col>
+                    <Col>
+                        <Form.Check
+                            type='radio'
+                            label='OVO'
+                            id='ovo'
+                            name='paymentMethod'
+                            unchecked
                             onChange={(e) => setPaymentMethod(e.target.value)}
                         >
 

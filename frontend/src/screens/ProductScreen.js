@@ -61,7 +61,7 @@ function ProductScreen({ match, history }) {
                 : error
                     ? <Message variant='danger'>{error}</Message>
                     : (
-                        <div>
+                        <div className='m-4'>
                             <Row>
                                 <Col md={6}>
                                     <Image src={product.image} alt={product.name} fluid />
@@ -151,7 +151,7 @@ function ProductScreen({ match, history }) {
 
                             <Row>
                                 <Col md={6}>
-                                    <h4>Reviews</h4>
+                                    <h4 className='m-4'>Reviews</h4>
                                     {product.reviews.length === 0 && <Message variant='info'>No Reviews</Message>}
 
                                     <ListGroup variant='flush'>

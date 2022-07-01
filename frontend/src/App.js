@@ -20,6 +20,7 @@ import OrderListScreen from './screens/OrderListScreen'
 import CustomDoorScreen from './screens/CustomDoorScreen'
 import NotificationCenterScreen from './screens/NotificationCenterScreen'
 import NotificationEditScreen from './screens/NotificationEditScreen'
+import AboutScreen from './screens/AboutScreen'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Container>
           <Route path='/' component={HomeScreen} exact />
           <Route path='/customdoor' component={CustomDoorScreen} />
+          <Route path='/about' component={AboutScreen} />
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />

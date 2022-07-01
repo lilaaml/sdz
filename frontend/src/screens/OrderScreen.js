@@ -29,7 +29,7 @@ function OrderScreen({ match, history }) {
 
 
     if (!loading && !error) {
-        order.itemsPrice = order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2)
+        order.itemsPrice = order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
     }
 
 
@@ -135,7 +135,7 @@ function OrderScreen({ match, history }) {
                                                             </Col>
 
                                                             <Col md={4}>
-                                                                {item.qty} X Rp.{item.price} = Rp.{(item.qty * item.price).toFixed(2)}
+                                                                {item.qty} X Rp. {item.price} = Rp. {(item.qty * item.price)}
                                                             </Col>
                                                         </Row>
                                                     </ListGroup.Item>
@@ -158,28 +158,28 @@ function OrderScreen({ match, history }) {
                                     <ListGroup.Item>
                                         <Row>
                                             <Col>Items:</Col>
-                                            <Col>Rp.{order.itemsPrice}</Col>
+                                            <Col>Rp. {order.itemsPrice}</Col>
                                         </Row>
                                     </ListGroup.Item>
 
                                     <ListGroup.Item>
                                         <Row>
                                             <Col>Shipping:</Col>
-                                            <Col>Rp.{order.shippingPrice}</Col>
+                                            <Col>Rp. {order.shippingPrice}</Col>
                                         </Row>
                                     </ListGroup.Item>
 
                                     <ListGroup.Item>
                                         <Row>
                                             <Col>Tax:</Col>
-                                            <Col>Rp.{order.taxPrice}</Col>
+                                            <Col>Rp. {order.taxPrice}</Col>
                                         </Row>
                                     </ListGroup.Item>
 
                                     <ListGroup.Item>
                                         <Row>
                                             <Col>Total:</Col>
-                                            <Col>Rp.{order.totalPrice}</Col>
+                                            <Col>Rp. {order.totalPrice}</Col>
                                         </Row>
                                     </ListGroup.Item>
 

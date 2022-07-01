@@ -1,5 +1,10 @@
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
 main{
-    min-height: 80vh;
+  min-height: 80vh;
+  background-color: #FFFEFB;
 }
 
 h1{
@@ -36,11 +41,10 @@ h3{
 }
 
 .carousel img {
-  display:block;
-  height: 300px;
+  display: block;
+  height: 500px;
   padding: 30px;
   margin: 40px;
-  border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -52,4 +56,3 @@ h3{
     font-size: 2.5vw;
   }
 }
-
